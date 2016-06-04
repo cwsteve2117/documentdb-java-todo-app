@@ -15,7 +15,7 @@ inputs:
   - name: docdb-demo
 
 run:
-  path: docdb-demo/ci/tasks/unit.sh
+  path: ./docdb-demo/ci/tasks/unit.sh
   args: [
     --input-dir, docdb-demo
   ]
