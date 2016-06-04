@@ -24,6 +24,6 @@ run:
     --input-dir, docdb-demo,
     --output-dir, build,
     --version-file, version/number,
-    --artifactId, docdb-demo,
+    --artifactId, azure-documentdb-java-sample,
     --packaging, war
   ]

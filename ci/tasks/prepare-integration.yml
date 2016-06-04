@@ -25,6 +25,6 @@ run:
     --output-dir, prepare-integration,
     --version-file, version/number,
     --input-manifest, docdb-demo/manifest.yml,
-    --artifactId, docdb-demo,
+    --artifactId, azure-documentdb-java-sample,
     --packaging, war
   ]

@@ -20,7 +20,7 @@ resources:
     type: s3
     source:
       bucket: {{s3-bucket-release-candidates}}
-      regexp: azure-documentdb-java-sample-0(.*).war
+      regexp: azure-documentdb-java-sample(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
       endpoint: {{s3-endpoint}}
@@ -29,7 +29,7 @@ resources:
     type: s3
     source:
       bucket: {{s3-bucket-releases}}
-      regexp: azure-documentdb-java-sample-0(.*).war
+      regexp: azure-documentdb-java-sample(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
       endpoint: {{s3-endpoint}}
@@ -69,7 +69,7 @@ jobs:
         params:
           <<: *MAVENPARAMS
       - put: candidate-release
-        params: { from: build/azure-documentdb-java-sample-0(.*).war }
+        params: { from: build/azure-documentdb-java-sample(.*).war }
       - put: version
         params: { file: version/number }
 
@@ -107,7 +107,7 @@ jobs:
       - task: prepare-final
         file: docdb-demo/ci/tasks/prepare-final.yml
       - put: final-release
-        params: { from: prepare-final/azure-documentdb-java-sample-0(.*).war }
+        params: { from: prepare-final/azure-documentdb-java-sample(.*).war }
       - put: version
         params: { file: version/number }
 
