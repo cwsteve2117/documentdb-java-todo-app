@@ -105,7 +105,7 @@ jobs:
       - get: version
         params: { bump: final }
       - task: prepare-final
-        file: documentdb-java-todo-app/ci/tasks/prepare-final.yml
+        file: docdb-demo/ci/tasks/prepare-final.yml
       - put: final-release
         params: { from: prepare-final/azure-documentdb-java-sample-0(.*).war }
       - put: version
