@@ -11,7 +11,7 @@ inputs:
   - name: docdb-demo
 
 run:
-  path: documentdb-java-todo-app/ci/tasks/integration.sh
+  path: docdb-demo/ci/tasks/integration.sh
   args: [
     --input-dir, docdb-demo
   ]

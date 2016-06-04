@@ -19,7 +19,7 @@ outputs:
   - name: build
 
 run:
-  path: documentdb-java-todo-app/ci/tasks/build.sh
+  path: docdb-demo/ci/tasks/build.sh
   args: [
     --input-dir, docdb-demo,
     --output-dir, build,
