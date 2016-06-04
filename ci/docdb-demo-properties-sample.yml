@@ -1,0 +1,16 @@
+github-uri: https://github.com/cwsteve2117/documentdb-java-todo-app.git
+github-branch: master
+s3-access-key-id: AKIAJJFGVGORJK5FBOLA  # AWS or S3 compatible access key id
+s3-secret-access-key: 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  # AWS or S3 compatible secret access key
+s3-endpoint: s3.amazonaws.com
+s3-bucket-version: docdb-demo-releases
+s3-bucket-releases: docdb-demo-releases
+s3-bucket-release-candidates: docdb-demo-release-candidates
+maven-opts: -Xms512m -Xmx512m
+maven-config: # -s path/to/settings.xml
+cf-api: https://api.pcfazure.com
+cf-username: docdb-demo-user
+cf-password: PcfAzure1!
+cf-org: docdb-demo
+cf-space: development
+cf-manifest-host: docdb-demo-ci
