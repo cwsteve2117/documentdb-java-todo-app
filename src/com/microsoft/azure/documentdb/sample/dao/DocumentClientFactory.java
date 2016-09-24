@@ -21,7 +21,7 @@ public class DocumentClientFactory {
     			ObjectMapper mapper = new ObjectMapper();
     		    JsonParser jp = mapper.getFactory().createParser(vcap_services);
     		    JsonNode rootNode = mapper.readTree(jp);
-    		    JsonNode documentDbNode = rootNode.get("cs-documentdb");
+    		    JsonNode documentDbNode = rootNode.get("azure-documentdb");
     		    if(documentDbNode != null){
     		    	JsonNode credentials = documentDbNode.get(0).get("credentials");
     		    	docDbCredentials.setHost(credentials.get("documentdb_host").asText());
@@ -56,7 +56,7 @@ public class DocumentClientFactory {
     			ObjectMapper mapper = new ObjectMapper();
     		    JsonParser jp = mapper.getFactory().createParser(vcap_services);
     		    JsonNode rootNode = mapper.readTree(jp);
-    		    JsonNode documentDbNode = rootNode.get("cs-documentdb");
+    		    JsonNode documentDbNode = rootNode.get("azure-documentdb");
     		    if(documentDbNode != null){
     		    	JsonNode credentials = documentDbNode.get(0).get("credentials");
     		    	docDbCredentials.setHost(credentials.get("documentdb_host").asText());
